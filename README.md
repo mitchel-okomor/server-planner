@@ -51,7 +51,7 @@ localhost:3000
 
 ### test with Postman
 
-make http POST request in the format below
+make http POST request in the format below in json
 {
 "servertype":{"CPU": 6, "RAM": 64, "HDD": 300},
 "virtualMachines": [{"CPU": 3, "RAM": 16, "HDD": 10}, {"CPU": 1, "RAM": 16, "HDD": 10}, {"CPU": 2, "RAM": 32, "HDD": 100}]
@@ -67,7 +67,7 @@ Build the docker image
 
 ### test with Postman
 
-make http POST request in the format below
+make http POST request in the format below in json
 {
 "servertype":{"CPU": 6, "RAM": 64, "HDD": 300},
 "virtualMachines": [{"CPU": 3, "RAM": 16, "HDD": 10}, {"CPU": 1, "RAM": 16, "HDD": 10}, {"CPU": 2, "RAM": 32, "HDD": 100}]
