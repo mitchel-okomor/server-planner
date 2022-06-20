@@ -45,6 +45,10 @@ run all unit test cases
 
 Build and start the application
 
+### Server address
+
+localhost:3000
+
 ### test with Postman
 
 make http POST request in the format below
@@ -68,3 +72,7 @@ make http POST request in the format below
 "servertype":{"CPU": 6, "RAM": 64, "HDD": 300},
 "virtualMachines": [{"CPU": 3, "RAM": 16, "HDD": 10}, {"CPU": 1, "RAM": 16, "HDD": 10}, {"CPU": 2, "RAM": 32, "HDD": 100}]
 }
+
+### Server address
+
+localhost:3000

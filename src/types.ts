@@ -1,3 +1,5 @@
 export type Machine = {
-	CPU:number, RAM:number, HDD:number
-}
+  CPU: number;
+  RAM: number;
+  HDD: number;
+};
