@@ -1,10 +1,9 @@
-import fs from 'fs'
 import http from 'http'
-import VirtualMachine from '../src/VirtualMachine';
-import ServerPlanning from '../src/ServerPlanning';
-import Server from '../src/Server';
+import VirtualMachine from './VirtualMachine';
+import ServerPlanning from './ServerPlanning';
+import Server from './Server';
 import { Machine } from './types';
-const hostname = '127.0.0.1';
+const hostname = '0.0.0.0';
 const port = 3000;
 
 
@@ -13,7 +12,7 @@ const server = http.createServer((req:any, res:any) => {
 
   if (req.url === '/'&&req.method ==='GET') {
     res.writeHead(200);
-    res.end('Server planner service');
+    res.end('Server planner service running correctly');
   }
   if(req.url === '/'&&req.method ==='POST'){
 	const body:any = [];

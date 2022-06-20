@@ -1,6 +1,6 @@
-import VirtualMachine from '../src/VirtualMachine';
-import ServerPlanning from '../src/ServerPlanning';
-import Server from '../src/Server';
+import VirtualMachine from '../VirtualMachine';
+import ServerPlanning from '../ServerPlanning';
+import Server from '../Server';
 
      
     /**
