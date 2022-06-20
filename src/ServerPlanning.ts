@@ -1,4 +1,6 @@
 import ServerAllocationFirstFitStrategy from './ServerAllocationFitStrategy';
+import Server from './Server';
+import VirtualMachine from './VirtualMachine';
 
 /**
  * @description Server Planning - this class represent server planning for the virtualMachines
@@ -12,7 +14,7 @@ import ServerAllocationFirstFitStrategy from './ServerAllocationFitStrategy';
 	  * @description If the collection of virtual machines is empty, an exception should be thrown.
 	  * 
 	  * @param server Object of type Server 
-	  * @param array  of type VirtualMachine
+	  * @param virtualMachines  of type VirtualMachine
 	  *
 	  * @return Integer the number of servers that is required, to host a non-empty collection of virtual machines
 	  */
@@ -23,12 +25,12 @@ import ServerAllocationFirstFitStrategy from './ServerAllocationFitStrategy';
 			  throw new Error("Empty Virtual Machine Collection");
 		 }
 		 
-		 const policy = new ServerAllocationFirstFitStrategy(server);
+		 const strategy = new ServerAllocationFirstFitStrategy(server);
 		 let counter = 0;
 		 
 
 		 for(const virtualMachine of virtualMachines) {
-			 if (policy.fit(virtualMachine)) {
+			 if (strategy.fit(virtualMachine)) {
 				 counter++;
 			 }
 		 }
@@ -36,4 +38,4 @@ import ServerAllocationFirstFitStrategy from './ServerAllocationFitStrategy';
 	 }
  }
 
- module.exports = ServerPlanning;
+export default ServerPlanning;

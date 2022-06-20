@@ -1,8 +1,10 @@
-
+import Server from './Server';
+import VirtualMachine  from './VirtualMachine';
+import IServerAllocationStrategy from './IServerAllocationStrategy';
 /**
  * @description This class represent the implementation ServerAllocationFirstFitStrategy 
  */
-class ServerAllocationFirstFitStrategy implements ServerAllocationStrategy
+class ServerAllocationFirstFitStrategy implements IServerAllocationStrategy
 {
 
     private availableCpu = 0;
@@ -47,5 +49,4 @@ class ServerAllocationFirstFitStrategy implements ServerAllocationStrategy
         }
     }
 }
-
-module.exports = ServerAllocationFirstFitStrategy;
+export default ServerAllocationFirstFitStrategy;

@@ -1,4 +1,5 @@
-interface ServerAllocationStrategy {
+import VirtualMachine from "./VirtualMachine";
+export default interface IServerAllocationStrategy {
 	/**
 	* @param vm object of type VirtualMachine
      *

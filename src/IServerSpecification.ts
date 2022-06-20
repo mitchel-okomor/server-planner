@@ -3,7 +3,7 @@
 /**
  * @description Represents the Main server/VirtualMachine specification from CPU,RAM,HDD
  */
-interface ServerSpecifications
+export default interface IServerSpecifications
 {
 
     /**

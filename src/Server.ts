@@ -1,11 +1,12 @@
-
+import {Machine} from './types';
+import IServerSpecifications from './IServerSpecification'
 
 /**
  * @description Server - this class represent the implementation of ServerSpecificationsInterface
  * 
  * 
  */
- class Server implements ServerSpecifications
+ class Server implements IServerSpecifications
  {
 	 
 	 private cpu;
@@ -22,11 +23,11 @@
 	  * @param ram server RAM value
 	  * @param hdd server HDD value
   */
-	 public constructor(cpu:number, ram:number, hdd:number)
+	 public constructor(machine:Machine)
 	 {
-		 this.cpu = this.validateResource('CPU', cpu);
-		 this.ram = this.validateResource('RAM', ram);
-		 this.hdd = this.validateResource('HDD', hdd);
+		 this.cpu = this.validateResource('CPU', machine.CPU);
+		 this.ram = this.validateResource('RAM', machine.RAM);
+		 this.hdd = this.validateResource('HDD', machine.HDD);
 	 }
 	   /**
 	  * @description Validate the passed input for the passed resource to be sure it is a number and is greater than 1 
@@ -40,7 +41,7 @@
 	  */   
  public validateResource(resource:string, input:number) :number
 	 {
-		 if (input < 1) {
+		 if (typeof input !=="number" ||  input < 1) {
 			 throw new Error(`${resource} must be positive value greater than or equal 1. Your input is ${input}`);
 		 }
 		 return input;
@@ -84,5 +85,4 @@
 	
    
  }
- 
- module.exports = Server;
+export default Server;

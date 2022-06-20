@@ -1,3 +1,3 @@
-type VirtualMachineType= {
-cpu:number, ram:number, hdd:number}
-
+export type Machine = {
+	CPU:number, RAM:number, HDD:number
+}
