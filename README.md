@@ -31,6 +31,13 @@ Your code should be fully (unit) tested!
 Endeavor to write clean, maintainable code.
 These requirements are just the bare minimum, add more functionality.
 
+# Tech Stack
+
+Typescript
+Nodejs
+Jest
+Docker
+
 # How to run the program without Docker
 
 ### npm install
